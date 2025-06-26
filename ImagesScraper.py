@@ -8,7 +8,7 @@ import re
 #     return re.sub(r'[\\/*?:"<>|]', "_", name)
 
 # Load the dataset
-json_path = r'C:\Milha\restaurant_scraping\dataset_cafe-google-places-all.json'
+json_path = r'dataset path'
 print(f"Loading data from: {json_path}")
 
 try:
@@ -23,8 +23,8 @@ except Exception as e:
 imageful = [place for place in restaurants if len(place.get("imageUrls", [])) > 0]
 print(f" {len(imageful)} place have at least 1 image.\n")
 
-# directory for images
-base_dir = r'C:\Milha\restaurant_scraping\cafe_images'
+# directory for storing images
+base_dir = r'directory path'
 os.makedirs(base_dir, exist_ok=True)
 
 # Download images per restaurant folder
